@@ -4,107 +4,333 @@
     box-sizing: border-box;
     outline: none; border:none;
     text-decoration: none;
-    text-transform: capitalize;
     transition: .2s linear;
 }
 
-.btn {
-    margin-top: 1rem;
-    display: inline-block;
-    padding:1rem 3rem;
-    font-size: 1.7rem;
-    color: black;
-    background: rgb(221, 168, 68);
-    cursor: pointer;
-    text-align: center;
-    margin-left: 34rem;
-    text-transform: uppercase;
+html {
+    font-size: 100%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
 }
 
+/* Header section starts */
 .header {
-    background: black;
-    opacity: 0.6;
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 7%;
+    padding: 1.5rem 7%;
     position: fixed;
     top: 0; left: 0; right:0;
     z-index: 1000;
-    height: 80px;
-    display: flex;
+    background: black;
+    opacity: 0.6;
+}
+
+.header h1 {
+    color :cornsilk;
+    font-size: 30px;
+}
+
+.header .navbar {
+    overflow: hidden;
+}
+
+.header .navbar ul li {
+    float: left;
+}
+
+.header .navbar ul li a {
+    color: cornsilk;
+    text-align: center;
+    padding: 14px 16px;
+    text-transform: uppercase;
     text-decoration: none;
-}
+  }
 
-.header .logo h1 {
-    color: aliceblue;
-    padding-right: 1px;
-}
-
-.header .navbar-1 a {
-    color: aliceblue;
-    justify-content: space-around;
-    padding-left: 30px;
-    text-transform: uppercase;
-}
-
-.header .navbar-2 a {
-    color: aliceblue;
-    justify-content: space-around;
-    padding-left: 30px;
-    text-transform: uppercase;
-}
-
-.header .navbar-1 a:hover {
-    color: gold;
-}
-
-.header .navbar-2 a:hover {
-    color: gold;
+.header .navbar ul li a:hover {
+    color: cornsilk;
+    background-color: gold;
 }
 
 .header .icons div{
-    color: #fff;
+    color: cornsilk;
     cursor: pointer;
-    font-size: 2.5rem;
-    margin-left: 2rem;
+    font-size: 20px;
 }
 
-/* home section starts */
+#menu-btn {
+    display: none;
+}
+/* Header section ends */
+
+/* Home section starts */
 .home {
-    display: flex;
-    background: url(/assets/main-bg.jpg);
+    display: relative;
+    background-image: url(/assets/main-bg.jpg);
+    background-size: cover;
+    height: 100vh;
     background-repeat: no-repeat;
     background-attachment: fixed; 
     background-size: 100% 100%;
+    text-align: center;
 }
 
-.home .content h3 {
-    font-size: 4rem;
-    text-transform: uppercase ;
-    color: aliceblue;
-    margin-left: 17rem;
-    margin-top: 180px;
+.home .content {
+    display: absolute;
 }
-.home .content p {
-    font-size: 1.5rem;
-    font-weight: lighter;
-    text-align: center;
-    margin-left: 250px;
-    line-height: 1.8;
-    padding: 2rem 0;
-    color: aliceblue;
-    text-transform: none;
-}
-.home .content h1 {
-    font-size: 1rem;
+
+.home .content h1{
+    color: cornsilk;
     text-transform: uppercase;
-    margin-left: 2rem;
-    color:aliceblue;
-    margin-top: 160px;
-    margin-left: 230px;
+    font-size: 73px;
+    padding-top: 200px;
+}
+
+.home .content h2{
+    color: cornsilk;
+    font-size: 20px;
+    padding-top: 30px;
+}
+
+.home .content .btn {
+    background-color: rgb(196, 136, 25);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 40px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    color: black;
+}
+
+.home .content a{
+    text-transform: uppercase;
+    color: black;
+}
+
+.home .content p {
+    color: cornsilk;
+    padding-top: 150px;
+    text-transform: uppercase;
+}
+/* Home section ends */
+
+/* Works section starts */
+.work {
+    background-image: url(/assets/the-games-bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+    height: 110vh;
+}
+
+.work .text {
+    font-size: 20px;
+    color: cornsilk;
+    padding-top: 130px;
+    padding-left: 50px;
+}
+
+.img-container {
+    float: left;
+    padding-top: 2px;
+    padding-left: 50px;
+}
+  
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.work .clearfix p{
+    font-size: 20px;
+    color: cornsilk;
+}
+
+.work .clearfix h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+    color: cornsilk;
+    padding-top: 15px;
+}
+/* work section ends */
+
+/* contact section starts */
+.contact {
+    background-image: url(/assets/features.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+    height: 100vh;
+}
+
+
+.contact .content {
+    float: right;
+    padding-top: 130px;
+    padding-right: 250px;
+}
+
+.contact .content p {
+    font-size: 20px;
+    color: cornsilk;
+}
+
+.contact .content h1 {
+    font-size: 50px;
+    color: cornsilk;
+}
+
+.contact .timeline {
+    float: left;
+    margin-left: 870px;
+    padding-top: 70px;
+}
+
+.contact .timeline::before {
+    content: "";
+    float: left;
+    position: absolute;
+    height: 133px;
+    width: 2px;
+    background-color: white;
+    left :850px;
+    margin-top: 15px;
+}
+
+.timeline .contentsatu h2 {
+    color: gold;
+}
+.timeline .contentsatu p {
+    color: white;
+    padding-top: 10px;
+}
+.timeline .contentdua h2 {
+    color: gold;
+    padding-top: 80px;
+}
+.timeline .contenttiga h2 {
+    color: gold;
+    padding-top: 50px;
+}
+
+.contact .timeline .contentsatu::after {
+    content: '';
+    float: left;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border: 1px white;
+    border-radius: 50%;
+    z-index: 1;
+    left: 843px;
+    margin-top: -52px;
+}
+
+.timeline .contentdua::after {
+    content: '';
+    position: absolute;
+    float: left;
+    width: 13px;
+    height: 13px;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 50%;
+    z-index: 1;
+    left: 843px;
+    margin-top: -20px;
+}
+
+.contact .timeline .contenttiga::after {
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 50%;
+    z-index: 1;
+    left: 843px;
+    margin-top: -21px;
+}
+/* contact section ends */
+
+/* about section starts */
+.about {
+    background-image: url(/assets/requirements.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+    height: 100vh;
+}
+
+.about .content {
+    padding-top: 100px;
+}
+
+.about .content p {
+    color: cornsilk;
+    text-transform: capitalize;
     text-align: center;
 }
-/* home section ends */
+
+.about .content h1 {
+    color: cornsilk;
+    text-transform: uppercase;
+    font-size: 65px;
+    padding-left: 100px;
+}
+
+.about .content h2 {
+    color: cornsilk;
+    text-transform: uppercase;
+    font-size: 60px;
+    padding-left: 100px;
+}
+
+.table {
+    padding-left: 100px;
+    padding-top: 50px;
+}
+
+table, td {
+    border: 1px solid white;
+    padding: 20px;
+    width: 250px;
+}
+  
+table {
+    border-collapse: collapse;
+    width: 50%;
+    padding-top: 100px;
+}
+
+.about .table table tr td h1 {
+    color: gold;
+}
+
+.about .table table tr td p {
+    color: white;
+    padding-top: 5px;
+}
+  
+
+
+
+
+
+
+
+
+
+    
 
 
 
@@ -123,46 +349,208 @@
 
 
 
-/* Media queries */
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
 @media (max-width:991px) {
+    html {
+        font-size: 55%;
+    }
     .header {
         padding: 1.5rem 2rem;
     }
+
+    .home .content h1 {
+        font-size: 6rem;
+    }
+
+    .contact .content {
+        float: right;
+        padding-right: 50px;
+    }
+
+    .contact .timeline {
+        float: right;
+        padding-top: 70px;
+        padding-right: 150px;
+    }
+
+    .contact .timeline::before {
+        left: 67%;
+        height: 24%;
+    }
+
+    .contact .timeline .contentsatu::after {
+        left: 66.2%;
+        margin-top: -70px;
+    }
+
+    .contact .timeline .contentdua::after {
+        left: 66.1%;
+    }
+
+    .contact .timeline .contenttiga::after {
+        left: 66.1%;
+    }
+
+    .about .content p {
+        font-size: 1.5rem;
+    }
+
+    .about .content h1 {
+        font-size: 4rem;
+        padding-left: 0;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .about .content h2 {
+        font-size: 4rem;
+        padding-left: 0;
+        text-align: center;
+    }
+
 }
 
 @media (max-width:768px) {
-    .header .navbar-1 {
+    #menu-btn {
+        display: inline-block;
+    }
+
+    .header .navbar {
         position: absolute;
-        top: 100%; right: -100%;
+        top:100%; right:-100%;
         background: black;
         opacity: 0.6;
         width: 30rem;
         height: calc(100vh - 9.5rem);
-   }
+    }
 
-   .header .navbar-1 a {
-       display: block;
-       margin: 1.5rem;
-       padding: .5rem;
-       font-size: 2rem;
-   }
+    .header .navbar.active {
+        right: 0;
+    }
 
-   .header .navbar-2 {
-    position: absolute;
-    top: 100%; right: -100%;
-    background: black;
-    opacity: 0.6;
-    width: 30rem;
-    height: calc(100vh - 9.5rem);
-   }
+    .header .navbar ul {
+        margin:20px;
+        padding: 2px;
+    }
 
-    .header .navbar-2 a {
-    display: inline-block;
-    font-size: 1.4rem;
-    margin-top: 21rem;
-    }   
-}
+    .header .navbar ul li {
+        display: block;
+        padding: 30px;
+        font-size: 15px;
+    }
+
+    .home {
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .home .content h1 {
+        font-size: 4rem;
+    }
+
+    .home .content p {
+        font-size: 1.5rem;
+    }
+
+    .img-container {
+        float: left;
+        padding: 0 auto;
+        text-align: center;
+        padding-right: 50px;
+    }
+
+    .contact .content {
+        float: right;
+        padding-right: 30px;
+    }
+
+    .contact .content p {
+        font-size: 2.5rem;
+    }
+
+    .contact .content h1 {
+        font-size: 3rem;
+    }
+
+    .contact .timeline {
+        float: right;
+        padding-top: 70px;
+        padding-right: 90px;
+    }
+
+    .contact .timeline::before {
+       left: 58%;
+       height: 24%;
+    }
+
+    .contact .timeline .contentsatu::after {
+        left: 56.5%;
+        margin-top: -70px;
+    }
+
+    .contact .timeline .contentdua::after {
+        left: 56.5%;
+    }
+
+    .contact .timeline .contenttiga::after {
+        left: 56.5%;
+    }
+
+    .about .content h1 {
+        font-size: 3rem;
+        padding-left: 0;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .about .content h2 {
+        font-size: 3rem;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .about .table {
+        padding-left: 0px;
+    }
+
+
+
     
+    
+
+}
+
 @media (max-width:450px) {
-   
+    
 }
